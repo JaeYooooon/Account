@@ -1,7 +1,7 @@
 package com.example.account.service;
 
 import com.example.account.domain.Account;
-import com.example.account.domain.AccountStatus;
+import com.example.account.type.AccountStatus;
 import com.example.account.repository.AccountRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -63,6 +63,7 @@ class AccountServiceTest {
     @Test
     @DisplayName("Test 이름 변경")
     void testGetAccount() {
+        //given
         given(accountRepository.findById(anyLong()))
                 .willReturn(Optional.of(Account.builder()
                         .accountStatus(AccountStatus.UNREGISTERED)
