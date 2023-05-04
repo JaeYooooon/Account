@@ -63,7 +63,6 @@ class AccountServiceTest {
     @Test
     @DisplayName("Test 이름 변경")
     void testGetAccount() {
-        //given
         given(accountRepository.findById(anyLong()))
                 .willReturn(Optional.of(Account.builder()
                         .accountStatus(AccountStatus.UNREGISTERED)
