@@ -1,6 +1,7 @@
 package com.example.account.service;
 
 import com.example.account.domain.Account;
+import com.example.account.repository.AccountUserRepository;
 import com.example.account.type.AccountStatus;
 import com.example.account.repository.AccountRepository;
 import org.junit.jupiter.api.DisplayName;
@@ -24,6 +25,8 @@ import static org.mockito.Mockito.verify;
 class AccountServiceTest {
     @Mock
     private AccountRepository accountRepository;
+    @Mock
+    private AccountUserRepository accountUserRepository;
     @InjectMocks
     private AccountService accountService;
 
