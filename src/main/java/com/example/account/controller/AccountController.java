@@ -55,6 +55,7 @@ public class AccountController {
                         .balance(accountDto.getBalance()).build())
                 .collect(Collectors.toList());
     }
+
     @GetMapping("/get-lock")
     public String getLock(){
         return redisTestService.getLock();
