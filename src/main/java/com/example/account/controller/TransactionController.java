@@ -6,7 +6,6 @@ import com.example.account.dto.QueryTransactionResponse;
 import com.example.account.dto.UseBalance;
 import com.example.account.exception.AccountException;
 import com.example.account.service.TransactionService;
-import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
@@ -68,5 +67,4 @@ public class TransactionController {
                 transactionService.queryTransaction(transactionId)
         );
     }
-
 }
