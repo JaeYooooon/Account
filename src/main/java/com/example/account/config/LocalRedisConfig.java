@@ -11,24 +11,13 @@ import javax.annotation.PreDestroy;
 public class LocalRedisConfig {
     @Value("${spring.redis.port}")
     private int redisPort;
-
     private RedisServer redisServer;
 
     @PostConstruct
-    public void startRedis(){
-        redisServer = RedisServer.builder()
-                .port(redisPort)
-                .setting("maxheap 128M")
-                .build();
-        try {
-            redisServer.start();
-        } catch (Exception e){
-            System.out.println("========================");
-            System.out.println(e);
-            System.out.println("========================");
-        }
+    public void startRedis() {
+        redisServer = new RedisServer(redisPort);
+        redisServer.start();
     }
-
     @PreDestroy
     public void stopRedis(){
         if(redisServer != null){
