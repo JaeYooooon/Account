@@ -23,7 +23,7 @@
 **거래 확인 기능**            | :heavy_check_mark: | 
 
 ## 🔻 RestAPI EndPoint
-### ◻ 계좌 API
+### 🔹 계좌 API
 - 계좌 생성 기능
 ```
 - Method Type : POST
@@ -55,7 +55,7 @@
            실패 응답
 - Success Response : 계좌번호, 잔액
 ```
-### ◻ 거래 API
+### 🔹 거래 API
 - 잔액 사용 기능
 ```
 - Method Type : POST
