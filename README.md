@@ -1,5 +1,6 @@
-<!-- # 📍 Account Project
--->
+# 📍 Account Project
+계좌 거래/관리 시스템 프로젝트
+
 ## ⚙ Tech Stack
 - Language : Java
 - Build : Gradle 
@@ -25,7 +26,7 @@
 
 ## 🔻 RestAPI EndPoint
 ### 🔹 계좌 API
-- 계좌 생성 기능
+- 계좌 생성
 ```
 - Method Type : POST
 - URI : /account
@@ -35,7 +36,7 @@
            실패 응답
 - Success Response : 사용자 아이디, 계좌번호, 등록일시
 ```
-- 계좌 해지 기능
+- 계좌 해지
 ```
 - Method Type : DELETE
 - URI : /account
@@ -47,7 +48,7 @@
            실패 응답
 - Success Response : 사용자 아이디, 계좌번호, 해지일시
 ```
-- 계좌 확인 기능
+- 계좌 확인
 ```
 - Method Type : GET
 - URI : /account?user_id={userId}
@@ -57,7 +58,7 @@
 - Success Response : 계좌번호, 잔액
 ```
 ### 🔹 거래 API
-- 잔액 사용 기능
+- 잔액 사용
 ```
 - Method Type : POST
 - URI : /transaction/use
@@ -71,7 +72,7 @@
             실패 응답
 - Success Response : 계좌번호, 거래 결과 코드(성공/실패), 거래 아이디, 거래금액, 거래일시
 ```
-- 잔액 사용 취소 기능
+- 잔액 사용 취소
 ```
 - Method Type : POST
 - URI : /transaction/cancel
@@ -82,7 +83,7 @@
            실패 응답
 - Success Response : 계좌번호, 거래 결과 코드(성공/실패), 거래 아이디, 거래금액, 거래일시
 ```
-- 거래 확인 기능
+- 거래 확인
 ```
 - Method Type : GET
 - URI : /transaction/{transactionId}
@@ -93,6 +94,5 @@
                      거래 결과 코드(성공/실패), 거래 아이디, 거래금액, 거래일시
 ```
 ## ❗ Impression
-지난 프로젝트와는 달리 세팅 부분은 비교적 쉽게 할 수 있었지만 Redis가 자꾸 말썽을 피워서 조금 힘들었다. JPA 와 Lombok 의 편리함을 느꼈고, 
-이전에 진행한 Spring Boot 프로젝트에서는 테스트코드로 샘플데이터를 만드는 곳에만 활용했었는데 이번 프로젝트에서는 테스트 코드의 작성법과 중요성을 느낄 수 있는 프로젝트였다. 또한 다양한 어노테이션을 활용해봐서 좋았다. 이번에 얻은 경험을 바탕으로 다음 프로젝트에서 더 잘 진행할 수 있도록 해야겠다.  
+지난 프로젝트와는 달리 세팅 부분은 비교적 쉽게 할 수 있었지만 Redis가 자꾸 말썽을 피워서 조금 힘들었다. JPA 와 Lombok 의 편리함을 느꼈고, 이전에 진행한 Spring Boot 프로젝트에서는 테스트코드로 샘플데이터를 만드는 곳에만 활용했었는데 이번 프로젝트에서는 테스트 코드의 작성법과 중요성을 느낄 수 있는 프로젝트였다. 또한 다양한 어노테이션을 활용해봐서 좋았다. 이번에 얻은 경험을 바탕으로 다음 프로젝트에서  잘 진행할 수 있도록 해야겠다.  
 
